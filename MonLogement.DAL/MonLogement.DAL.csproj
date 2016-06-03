@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\Database.sql" />
+    <Content Include="Database\DropDatabase.sql" />
     <Content Include="Database\SPUser.sql" />
     <Content Include="Database\SPAd.sql" />
     <Content Include="Database\SPAgency.sql" />
