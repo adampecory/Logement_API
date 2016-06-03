@@ -1,0 +1,35 @@
+﻿USE Logement
+GO 
+
+/* ROLE */
+
+CREATE PROCEDURE spRoleGet
+AS
+SELECT * FROM "ROLE"
+GO
+
+CREATE PROCEDURE spRoleGetbyId @Id INT
+AS
+SELECT * FROM "ROLE" where ID=@Id
+GO
+
+CREATE PROCEDURE spRoleGetbyName @Name NVARCHAR(50)
+AS
+SELECT * FROM "ROLE" where NAME=@Name
+GO
+
+CREATE PROCEDURE spRoleAdd @Name NVARCHAR(50)
+AS
+INSERT INTO ROLE(NAME) VALUES(@Name)
+GO 
+
+CREATE PROCEDURE spRoleUpdate @Id INT, @Name NVARCHAR(50)
+AS
+UPDATE ROLE set NAME=@Name where ID=@Id
+GO
+
+CREATE PROCEDURE spRoleDelete @Id	INT
+AS
+DELETE FROM dbo.USERROLE where ID_ROLE=@Id
+Delete from ROLE where ID=@Id
+GO
